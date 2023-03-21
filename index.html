@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="write-section">
+      <p>Bill</p>
+      <label>
+        <input type="number" id="bill-input" class="bill-input" placeholder="0">
+      </label>
+     <div class="select-tip">
+        <p class=>Select Tip %</p>
+        <div class="btn-div">
+          <button onclick="calculateTip(5)"  class="btn first">5%</button>
+          <button onclick="calculateTip(10)"  class="btn second">10%</button>
+          <button onclick="calculateTip(15)"  class="btn third">15%</button>
+          <button onclick="calculateTip(25)"  class="btn fourth">25%</button>
+          <button onclick="calculateTip(50)"  class="btn fifth">50%</button>
+          <input oninput="customTip()" id="custom-tip" class="sixth" placeholder="Custom" type="number" class="btn">
+        </div>
+     </div>
+      <p> Number of People</p>
+      <label>
+        <input type="number" id="people-input" class="people-input" placeholder="0">
+      </label>
+    </section> 
+    <section class="read-section">
+      <div class="first-view">
+        <div class="tip-person">
+          <p> Tip Amount</p>
+          <span> / person </span>
+        </div>
+        <h1 id="tip-amount" class="tip-amount" >
+          $0
+        </h1>
+      </div>
+     <div class="second-view">
+       <div class="tip-total">
+        <p> Total</p>
+        <span> / person </span>
+       </div>
+       <h1 id="total-tip">$0</h1>
+     </div>
+      <button onclick="reset()" >Reset</button>
+    </section>
+  </div>
+
+ <script src="js//index.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
